@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAN Ho Yeung</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="main-heading">
+        <h1>WAN Ho Yeung</h1>
+    </div>
+
+    <div id="wrapper">
+        <div class="section">
+            <h2>Working Experience</h2>
+            <div class="sectionStyle1">
+                <div>
+                JUN 2023 – NOV 2023
+                </div> 
+
+                <div>
+                <b>Hong Kong Branch of National Precious Metals Material Engineering Research Center</b><br>
+                <b>Website Design and Maintenance (Part-time)</b>
+                <ul>
+                    <li>Updated information and created five HTML pages with a preliminary design using CSS for the International Conference: IUMRS-ICEM 2024, ensuring accurate and visually appealing content presentation.</li>
+                    <li>Maintained and updated the official website of NPMM using Drupal CMS, ensuring the website's functionality and content are up to date.</li>
+                    <li>Improved the user interface (UI) of the Hong Kong Materials Research Society’s official website using CSS, HTML, and WordPress, resulting in enhanced user experience and increased website traffic.</li>
+                    <li>Conducted data verification and processing using Microsoft Excel, make sure of the accuracy and completeness of data.</li>
+                </ul>
+                <br>
+                <a href="https://hkmrs.org/iumrs-icem2024/conference-information.html" target="_blank"><img height="70px" src="image/logo-2.svg"></a>
+                <a href="https://www.cityu.edu.hk/casm/npmm/about-npmm" target="_blank"><img height="70px" src="image/NPMM.jpg"></a>
+                <a href="https://hkmrs.org" target="_blank"><img height="70px" src="image/logo-HKMRS.png"></a>
+
+            </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <div class="sectionStyle2">
+                <div>
+                2021 – 2025
+                </div> 
+
+                <div>
+                <b>City University of Hong Kong</b><br><br>
+                Bachelor of Engineering: Information Engineering<br>
+                Cumulative GPA: 3.21 / 4.3
+                </div>
+
+                <div id="chartContainer">
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+            </div>
+
+            <div id="displayGrade" style="justify-content: center; display: flex; margin-bottom: 10px; font-size: 20px; color: rgb(13, 54, 92); font-weight: bold">Course List
+                <img id="display" style="height: 22px; padding-left: 20px;" src="image/down.svg">
+            </div>
+
+            <table id="gradeTable" style="display: none;">
+                <thead>
+                    <th>
+                        Course Title
+                    </th>
+                    <th>
+                        Grade
+                    </th>
+                </thead>
+                <tbody>
+                      <tr>
+                        <td>Foundations of Digital Techniques</td>
+                        <td>B</td>
+                      </tr>
+                      <tr>
+                        <td>Introduction to Electronic Design</td>
+                        <td>B</td>
+                      </tr>
+                      <tr>
+                        <td>Calculus and Basic Linear Algebra I</td>
+                        <td>B+</td>
+                      </tr>
+                      <tr>
+                        <td>General Physics II</td>
+                        <td>C</td>
+                      </tr>
+                      <tr>
+                        <td>Introduction to Computer Programming</td>
+                        <td>B-</td>
+                      </tr>
+                      <tr>
+                        <td>Principles of Electrical Engineering</td>
+                        <td>B+</td>
+                      </tr>
+                      <tr>
+                        <td>Foundations of Information Systems and Data Analysis</td>
+                        <td>B</td>
+                      </tr>
+                      <tr>
+                        <td>Critical and Creative Thinking</td>
+                        <td>B</td>
+                      </tr>
+                      <tr>
+                        <td>Calculus and Basic Linear Algebra II</td>
+                        <td>C+</td>
+                      </tr>
+                      <tr>
+                        <td>Chinese Civilisation - History and Philosophy</td>
+                        <td>B+</td>
+                      </tr>
+                      <tr>
+                        <td>Computer Programming</td>
+                        <td>B</td>
+                      </tr>
+                      <tr>
+                        <td>Electronic Devices and Circuits</td>
+                        <td>B-</td>
+                      </tr>
+                      <tr>
+                        <td>Foundations of Information Engineering</td>
+                        <td>B</td>
+                      </tr>
+                      <tr>
+                        <td>Green Economics</td>
+                        <td>B+</td>
+                      </tr>
+                      <tr>
+                        <td>University English</td>
+                        <td>A-</td>
+                      </tr>
+                      <tr>
+                        <td>Multi-variable Calculus and Linear Algebra</td>
+                        <td>B</td>
+                      </tr>
+                      <tr>
+                        <td>Logic Circuit Design</td>
+                        <td>B+</td>
+                      </tr>
+                      <tr>
+                        <td>Data Structures and Algorithms</td>
+                        <td>A-</td>
+                      </tr>
+                      <tr>
+                        <td>Data Communications and Networking</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Probability Models in Information Engineering</td>
+                        <td>B-</td>
+                      </tr>
+                      <tr>
+                        <td>Managing Your Personal Finance</td>
+                        <td>B</td>
+                      </tr>
+                      <tr>
+                        <td>English for Engineering</td>
+                        <td>A-</td>
+                      </tr>
+                      <tr>
+                        <td>Algebra</td>
+                        <td>A-</td>
+                      </tr>
+                      <tr>
+                        <td>Database Systems</td>
+                        <td>B+</td>
+                      </tr>
+                      <tr>
+                        <td>Microcomputer Systems</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Java Programming and Applications</td>
+                        <td>A-</td>
+                      </tr>
+                      <tr>
+                        <td>Signals and Systems</td>
+                        <td>B+</td>
+                      </tr>
+                      <tr>
+                        <td>Optimization Methods for Engineering</td>
+                        <td>A</td>
+                      </tr>
+                </tbody>
+            </table>
+
+            <div class="sectionStyle2">
+                <div>
+                    2014 – 2021
+                </div> 
+                
+                <div>
+                <b>The Methodist Church Hong Kong Wesley College</b><br><br>
+                Hong Kong Diploma of Secondary Education Examination
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="sectionStyle2">
+                <div>Languages</div> 
+                <div>
+                    <b>Native:</b>
+                    <ul>
+                        <li>Cantonese</li>
+                    </ul>
+
+                    <b>Good:</b>
+                    <ul>
+                        <li>English</li>
+                        <li>Mandarin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sectionStyle2">
+                <div>Computer Skills</div> 
+                <div>
+                    <b>Good:</b>
+                    <ul>
+                        <li>Microsoft Office</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+
+                    </ul>
+
+                    <b>Intermediate:</b>
+                    <ul>
+                        <li>MATLAB</li>
+                      </ul>
+                </div>
+            </div>
+            <div class="sectionStyle2">
+                <div>Soft Skills</div> 
+                <div>
+                    <ul>
+                        <li>Problem-Solving</li>
+                        <li>Communication</li>
+                        <li>Adaptability</li>
+                        <li>Interpersonal ability</li>
+                        <li>Organization skills</li>
+                        <li>Presentation skills</li>                    
+                    </ul>
+                </div>    
+            </div>
+
+        <div class="scetion">
+            <h2>Public Services</h2>
+            <div class="sectionStyle2">
+                    <div>
+                        2018 - 2024
+                    </div> 
+    
+                    <div>
+                    <b>Food and Environmental Hygiene Department and Centre for Food Safety</b><br>
+                    <b>Member of Consumer Liaison Group</b>
+                    <ul>
+                        <li>Attend focus group meetings </li>
+                        <li>Participate in the Centre for Food Safety's survey</li>
+                        <li>Give advice and suggestions on food safety and risk communication issues</li>
+                    </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    
+    <footer class="footer-container">
+        <div id="copyright"></div>
+        <div class="back-to-top">
+            <a class="not" href="#" title="Back to Top"><span class="hidden-label"></span></a>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+
+    // Smooth scroll to top when the button is clicked
+    document.querySelector('.back-to-top a').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    // Show or hide the button based on scroll position
+    window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        if (scrollPosition > (document.documentElement.scrollHeight - window.innerHeight) / 2) {
+            document.querySelector('.back-to-top').style.display = 'block';
+        } else {
+            document.querySelector('.back-to-top').style.display = 'none';
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const gradeValues = {
+            'A+': 4.3,
+            'A': 4,
+            'A-': 3.7,
+            'B+': 3.3,
+            'B': 3,
+            'B-': 2.7,
+            'C+': 2.3,
+            'C': 2,
+            'D': 1,
+            'F': 0,
+        };
+            
+        // Get the grade table
+        const gradeTable = document.getElementById('gradeTable');
+        const tbody = gradeTable.querySelector('tbody');
+        const rows = Array.from(tbody.getElementsByTagName('tr'));
+        
+        // Sort the rows based on grade values
+        rows.sort((row1, row2) => {
+        const grade1 = row1.cells[1].innerText;
+        const grade2 = row2.cells[1].innerText;
+
+        const codeAdd1 = row1.cells[0].innerText;
+        const codeAdd2 = row2.cells[0].innerText;
+
+        let value1 = gradeValues[grade1];
+        let value2 = gradeValues[grade2];
+
+        if(codeAdd1.includes("Programming") || codeAdd1.includes("Data") || codeAdd1.includes("Java")) {
+            value1 += 0.02;
+            row1.cells[0].style.fontWeight = "bold";
+            row1.cells[0].style.color = "rgb(25, 53, 89)";
+            row1.cells[1].style.fontWeight = "bold";
+            row1.cells[1].style.color = "rgb(25, 53, 89)";
+        }
+        if(codeAdd1.includes("Engineering")) {
+            value1 += 0.01;
+        }
+
+        if(codeAdd2.includes("Programming") || codeAdd2.includes("Data") || codeAdd2.includes("Java")) {
+            value2 += 0.02;
+            row2.cells[0].style.fontWeight = "bold";
+            row2.cells[0].style.color = "rgb(25, 53, 89)";
+            row2.cells[1].style.fontWeight = "bold";
+            row2.cells[1].style.color = "rgb(25, 53, 89)";
+        }
+        if(codeAdd2.includes("Engineering")) {
+            value2 += 0.01;
+        }
+        
+        // Sort in descending order
+        return value2 - value1;
+        });
+        
+        // Clear the existing table
+        while (tbody.firstChild) {
+        tbody.removeChild(tbody.firstChild);
+        }
+        
+        // Append the sorted rows to the table
+        rows.forEach(row => {
+            tbody.appendChild(row);
+        });
+
+        const gradeColumn = Array.from(gradeTable.querySelectorAll('tbody tr td:nth-child(2)'));
+
+        // Count the number of each grade
+        const gradeCounts = {};
+        gradeColumn.forEach(gradeCell => {
+        const grade = gradeCell.innerText;
+        gradeCounts[grade] = (gradeCounts[grade] || 0) + 1;
+        });
+
+        // Prepare data for the pie chart
+        const labels = Object.keys(gradeCounts);
+        const data = Object.values(gradeCounts);
+
+        // Create the doughnut chart
+        const ctx = document.getElementById('doughnutChart').getContext('2d');
+        new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+            data: data,
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(153, 102, 255)',
+                '#9cc5ec', 
+                '#f4ddc7', 
+                '#f7dbdc'
+
+            ],
+            }],
+        },
+        });
+    });
+
+    const displayGrade = document.getElementById('displayGrade');
+    const display = document.getElementById('display');
+    const gradeTable = document.getElementById('gradeTable');
+
+    var test = true;
+    displayGrade.addEventListener('click', () => {
+        if (test == true) {
+            display.src = 'image/down.svg';
+            gradeTable.style.display = 'none';
+            test = false;
+        }
+
+        else if (test == false) {
+            gradeTable.style.display = 'table';
+            display.src = 'image/up.svg';
+            test = true;
+        }
+    });
+
+    var copyright = document.getElementById('copyright');
+    var copyrightText = "© "
+    var date = new Date();
+    var year = date.getFullYear();
+    var copyrightText2 = " WAN Ho Yeung. All right reserved."
+
+    copyright.textContent = copyrightText + year + copyrightText2;
+    copyright.style.backgroundImage = "url('image/home.png')";
+    copyright.style.color = "white";
+    copyright.style.padding = "10px";
+    copyright.style.width = "100%";
+    copyright.style.textAlign = "center";
+
+        
+</script>
