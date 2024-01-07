@@ -209,3 +209,9 @@ table:hover {
         color: white;
     }
 }
+
+@media (min-width: 1950px) {
+    .main-heading {
+        height: 450px;
+    }
+}
