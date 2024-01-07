@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <div id="displayGrade" style="justify-content: center; display: flex; margin-bottom: 10px; font-size: 20px; color: rgb(13, 54, 92); font-weight: bold">Course List
+            <div id="displayGrade" style="justify-content: center; display: flex; margin-bottom: 10px; font-size: 20px; color: rgb(13, 54, 92); font-weight: bold">Courses with B+ or above
                 <img id="display" style="height: 22px; padding-left: 20px;" src="image/down.svg">
             </div>
 
@@ -360,13 +360,17 @@
         
         // Clear the existing table
         while (tbody.firstChild) {
-        tbody.removeChild(tbody.firstChild);
+          tbody.removeChild(tbody.firstChild);
         }
         
         // Append the sorted rows to the table
         rows.forEach(row => {
             tbody.appendChild(row);
+            if (row.children[1].innerText === 'F' || row.children[1].innerText === 'D' || row.children[1].innerText === 'C+' || row.children[1].innerText === 'C' || row.children[1].innerText === 'C-' || row.children[1].innerText === 'B' || row.children[1].innerText === 'B-') {
+                row.style.display = 'none';
+            }
         });
+
 
         const gradeColumn = Array.from(gradeTable.querySelectorAll('tbody tr td:nth-child(2)'));
 
