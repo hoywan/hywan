@@ -258,4 +258,33 @@ table:hover {
 		background-color: rgb(25, 53, 89);
 		color: white;
 	}
+
+	#projectTable{
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#projectTable p {
+		margin-right: 20px;
+		text-align: left;
+
+	}
+	#projectTable img {
+		height: 60px;
+	}
+
+	#projectTable thead {
+		display: none;
+	  }
+  
+	  #projectTable td {
+		display: block;
+		padding: 8px;
+	  }
+  
+	  #projectTable td:before {
+		content: attr(data-label);
+		float: left;
+		font-weight: bold;
+	  }
 }
