@@ -1,0 +1,259 @@
+<!-- This html file is created by WAN Ho Yeung
+Date: 2023-01-08 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bank</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+
+	<body>
+		<div class="main-heading">
+			<h1>BANK A</h1>
+			<img
+				src="image/userAL.svg"
+				alt="deposit"
+				width="70"
+				id="userlogo"
+				style="display: none"
+			/>
+			<img src="image/admin.svg" alt="admin" id="adminlogo" width="70" />
+		</div>
+
+		<!-- UI Before login -->
+		<div class="container">
+			<div class="form-container">
+				<form id="create-account-form">
+					<h2>Create Account</h2>
+					<label for="customer-id">Customer ID:</label><br />
+					<input
+						type="text"
+						id="customer-id"
+						name="customer-id"
+						required
+					/><br />
+					<label for="password">Password:</label><br />
+					<input type="password" id="password" name="password" required /><br />
+					<label for="account-name">Account Name:</label><br />
+					<input
+						type="text"
+						id="account-name"
+						name="account-name"
+						required
+					/><br />
+					<label for="deposit">Initial Deposit:</label><br />
+					<input type="number" id="deposit" name="deposit" required /><br />
+					<button type="submit" id="create-account">
+						<img src="image/user.svg" alt="deposit" width="70" /><br />Create
+						Account
+					</button>
+				</form>
+				<form id="login-form">
+					<h2>Login</h2>
+					<label for="login-customer-id">Customer ID:</label><br />
+					<input
+						type="text"
+						id="login-customer-id"
+						name="login-customer-id"
+						required
+					/><br />
+					<label for="login-password">Password:</label><br />
+					<input
+						type="password"
+						id="login-password"
+						name="login-password"
+						required
+					/><br />
+					<button type="submit" id="key-lock">
+						<img src="image/key.png" alt="key-lock" width="70" /><br />Login
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- UI After login -->
+		<div class="account-container">
+			<div
+				class="dashboard-container"
+				id="dashboard-container"
+				style="display: none"
+			>
+				<h2 style="text-align: center">Dashboard</h2>
+				<p>Account No: <span id="account-no"></span></p>
+				<p>Account Name: <span id="dashaccount-name"></span></p>
+				<p>Customer ID: <span id="dashcust-id"></span></p>
+
+				<p>Current Balance: HKD$ <span id="current-balance"></span></p>
+				<!-- <p
+					style="
+						color: white;
+						background-color: rgb(13, 54, 92);
+						border-bottom: 1px solid #ccc;
+					"
+				>
+					Transaction Record
+				</p> -->
+				<!-- <div id="transaction-record"></div> -->
+
+				<div
+					id="button-container"
+					style="
+						display: grid;
+						grid-template-rows: repeat(2, 1fr);
+						grid-gap: 10px;
+						width: 100%;
+						align-items: center;
+						justify-content: cneter;
+					"
+				>
+					<div class="row">
+						<button id="deposit-button" class="item">
+							<img
+								src="image/deposit.svg"
+								alt="Deposit"
+								width="70"
+							/><br />Deposit
+						</button>
+						<button id="withdraw-button" class="item">
+							<img
+								src="image/withdraw.svg"
+								alt="Withdraw"
+								width="70"
+							/><br />Withdraw
+						</button>
+					</div>
+					<div class="row">
+						<button id="transfer-button" class="item">
+							<img
+								src="image/exchange.svg"
+								alt="Transfer"
+								width="70"
+							/><br />Transfer
+						</button>
+						<button id="log-out-button" class="item">
+							<img src="image/logout.svg" alt="logout" height="67" /><br />Log
+							out
+						</button>
+					</div>
+					<div class="row">
+						<button id="close-account-button" class="item">
+							<img src="image/cancel.svg" alt="cancel" width="70" /><br />Cancel
+							Account
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<table id="transactionsTable">
+				<thead>
+					<th>Time</th>
+					<th>Type</th>
+					<th>Amount</th>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<!-- ***Admin UI After enter password -->
+		<div class="account-container">
+			<div
+				class="dashboard-container"
+				id="admin-dashboard-container"
+				style="display: none"
+			>
+				<h2 style="text-align: center">Dashboard</h2>
+
+				<div class="row" style="margin: 10px 0 20px 0">
+					<button id="admin-search-button" class="item">
+						<img
+							src="image/findCustomer.svg"
+							alt="findCustomer"
+							height="67"
+						/><br />Search Account
+					</button>
+
+					<button id="Database-button" class="item">
+						<img src="image/database.svg" alt="database" width="70" /><br />
+						Database
+					</button>
+				</div>
+
+				<div id="search-container">
+					<div id="userImage">
+						<img src="image/userAL.svg" alt="user" width="70" />
+					</div>
+					<p>Account No: <span id="search-account-no"></span></p>
+					<p>Account Name: <span id="search-dashaccount-name"></span></p>
+					<p>Customer ID: <span id="search-dashcust-id"></span></p>
+					<p>Current Balance: HKD$ <span id="search-current-balance"></span></p>
+				</div>
+
+				<div
+					id="button-container"
+					style="
+						display: grid;
+						grid-template-rows: repeat(1, 1fr);
+						grid-gap: 10px;
+						width: 100%;
+						align-items: center;
+						justify-content: cneter;
+						margin-top: 10px;
+					"
+				>
+					<div class="row">
+						<button id="admin-logout-button" class="item">
+							<img src="image/logout.svg" alt="deposit" height="67" /><br />Log
+							out
+						</button>
+
+						<button id="Cancel-any-account-button" class="item">
+							<img
+								src="image/cancel.svg"
+								alt="deposit"
+								width="70"
+							/><br />Cancel Any Account
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<table id="AdminTransactionsTable">
+				<thead>
+					<th>Time</th>
+					<th>Type</th>
+					<th>Amount</th>
+				</thead>
+				<tbody></tbody>
+			</table>
+
+			<table id="Database">
+				<thead>
+					<th>Account No</th>
+					<th>Account Name</th>
+					<th>Customer ID</th>
+					<th>Current Balance</th>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<footer class="footer-container">
+			<div id="copyright"></div>
+			<div class="back-to-top">
+				<a class="not" href="#" title="Back to Top"
+					><span class="hidden-label"></span
+				></a>
+			</div>
+		</footer>
+	</body>
+
+	<script src="script.js"></script>
+</html>

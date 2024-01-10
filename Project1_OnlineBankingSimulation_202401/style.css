@@ -1,0 +1,506 @@
+/*
+This css file is created by WAN Ho Yeung
+Date: 2023-01-08
+*/
+
+body {
+	font-family: Roboto, system-ui, PingFang TC, Heiti TC, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	color: white;
+}
+
+#wrapper {
+	margin: 0 10% 0 10%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: -5%;
+	margin-left: 20%;
+	width: 60%;
+	padding: 20px;
+	text-align: center;
+	align-items: ceenter;
+	justify-content: center;
+}
+
+.form-container {
+	margin-top: 20px;
+}
+
+form {
+	position: relative;
+	display: inline-block;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	background-color: rgb(13, 54, 92);
+	width: 90%;
+	justify-content: center;
+	align-items: center;
+}
+
+input {
+	width: 80%;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+button {
+	background-color: white;
+	color: rgb(45, 105, 185);
+	border: none;
+	border-radius: 20px;
+	padding: 10px;
+	margin-top: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	width: 40%;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+/* UI After login  */
+
+.account-container {
+	display: flex;
+	gap: 10%;
+	margin-left: 10%;
+	margin-bottom: 4%;
+}
+
+.dashboard-container {
+	margin-top: 20px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	display: none;
+	width: 35%;
+	background-color: rgb(13, 54, 92);
+}
+
+#transaction-record {
+	color: white;
+	margin-bottom: 20px;
+	text-align: left;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+#transactionForm {
+	margin: 30px;
+	border: 1px solid white;
+}
+
+#close-account-button {
+	background-color: rgb(237, 109, 133);
+	color: white;
+}
+
+.row {
+	display: flex;
+	gap: 20px;
+}
+
+.item {
+	flex: 2;
+}
+
+.main-heading {
+	background-image: url("image/home.png");
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 100%;
+	color: white;
+	display: flex;
+	align-items: flex-start;
+	justify-content: left;
+	margin: 0;
+	padding-top: 50px;
+	padding-left: 10%;
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+	font-size: 25px;
+}
+
+.section {
+	margin: -50px 0 100px 0;
+}
+
+/* back-to-top */
+.footer-container .back-to-top a:after {
+	background: url(image/back-to-top.svg) no-repeat center center;
+	width: 25px;
+	height: 25px;
+	background-size: 25px 25px;
+	display: block;
+	content: " ";
+	left: 12.5px;
+	top: 12.5px;
+	position: absolute;
+	border-radius: 50%;
+}
+.footer-container .back-to-top a:hover {
+	transform: scale(1.05);
+}
+.footer-container .back-to-top {
+	display: none; /* Hide the button by default */
+	position: fixed;
+	bottom: 50px;
+	right: 3.5%;
+	z-index: 999;
+}
+.footer-container .back-to-top a {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	background: rgb(13, 54, 92);
+	-webkit-border-radius: 2px;
+	border-radius: 50%;
+}
+.footer-container a {
+	color: #ffffff;
+}
+
+h2 {
+	position: relative;
+}
+
+h2::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: -10px;
+	height: 4px;
+	border-radius: 50px;
+	width: 0;
+	background: white;
+	transition: width 0.3s ease;
+	width: 30%;
+}
+
+h2:hover::before {
+	width: 100%;
+}
+
+/* Transcation Table initialization*/
+
+table {
+	width: 100%;
+	border-radius: 20px;
+	overflow: hidden;
+	border-collapse: collapse;
+	transition: transform 0.3s ease;
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+#transactionsTable {
+	width: 40%;
+	display: none;
+}
+
+tr:not(:last-child) {
+	border-bottom: 1px solid #ccc; /* Add inner border to all cells except the last row */
+}
+
+th {
+	background-color: rgb(13, 54, 92);
+	color: white;
+}
+
+th,
+td {
+	text-align: center;
+	padding: 15px 25px;
+}
+
+td {
+	color: rgb(25, 53, 89);
+}
+
+td:nth-child(0) {
+	width: 10%;
+}
+
+th:not(:last-child) {
+	border-right: 1px solid #ccc;
+}
+
+td:not(:last-child) {
+	border-right: 1px solid #ccc;
+}
+
+table:hover {
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+	outline: none;
+}
+
+/* Animation initialization*/
+
+@media (max-width: 780px) {
+	#wrapper {
+		margin: 0 0 0 5px;
+	}
+
+	.sectionStyle1 {
+		font-size: 1em;
+		display: grid;
+		width: 90%;
+	}
+
+	.sectionStyle1 img {
+		margin-bottom: 30px;
+	}
+
+	.sectionStyle2 {
+		display: grid;
+		width: 90%;
+	}
+
+	table {
+		width: 100%;
+		margin: 0;
+	}
+	table tr {
+		width: 100%;
+	}
+	table td {
+		width: 100%;
+	}
+
+	#copyright {
+		padding: 10px;
+		width: 100%;
+		background-color: rgb(25, 53, 89);
+		color: white;
+	}
+
+	/* UI Before login in mobile */
+	.container {
+		margin-left: 16%;
+	}
+
+	/* UI After login in mobile */
+
+	.account-container {
+		display: grid;
+		width: 90%;
+		gap: 2%;
+		margin-left: 3%;
+		margin-top: -2%;
+	}
+
+	.dashboard-container {
+		width: 90%;
+		margin-top: -10%;
+		margin-left: 3%;
+	}
+
+	#transactionsTable {
+		width: 88%;
+		margin-left: 3%;
+	}
+
+	.back-to-top {
+		display: none;
+	}
+}
+
+@keyframes transHor {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(20px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes shakehor {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-5px);
+	}
+	50% {
+		transform: translateX(5px);
+	}
+	75% {
+		transform: translateX(-5px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes shakeup {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-5px);
+	}
+	50% {
+		transform: translateY(5px);
+	}
+	75% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes shakedown {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(5px);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+	75% {
+		transform: translateY(5px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+#key-lock:hover img {
+	content: url("image/key-lock.png");
+	height: 79.77px;
+	width: 70px;
+	filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+	transition: rop-shadow 0.3s ease-in-out;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+
+/* Apply the animation on each button*/
+#deposit-button:hover img {
+	animation: shakeup 2s infinite;
+}
+
+#withdraw-button:hover img {
+	animation: shakedown 2s infinite;
+}
+
+#transfer-button:hover img {
+	animation: shakehor 2s infinite;
+}
+
+#log-out-button:hover img,
+#admin-logout-button:hover img {
+	animation: transHor 2s infinite alternate;
+}
+
+#create-account img {
+	animation: rotate 3s infinite;
+	transform-origin: center;
+}
+
+#create-account:hover img {
+	animation: none;
+	transform-origin: center;
+}
+
+#close-account-button:hover img,
+#Cancel-any-account-button:hover img {
+	animation: rotate 3s infinite alternate;
+}
+
+/* Admin UI */
+
+#userlogo {
+	position: absolute;
+	top: 10%;
+	right: 10%;
+}
+
+#adminlogo {
+	position: absolute;
+	top: 10%;
+	right: 10%;
+}
+
+#adminlogo:hover {
+	cursor: pointer;
+	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+	transition: rop-shadow 0.3s ease-in-out;
+}
+
+#search-container {
+	margin-top: 10px;
+	background-color: rgb(64, 137, 190);
+	border-radius: 20px;
+	padding: 10px;
+	display: none;
+}
+
+#userImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#AdminTransactionsTable {
+	width: 40%;
+}
+
+#admin-search-button:hover img {
+	animation: resize 3s infinite;
+}
+
+#Database-button:hover img {
+	animation: rotate 2s infinite;
+}
+
+@keyframes resize {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+#AdminTransactionsTable {
+	display: none;
+}
+
+#Database {
+	display: none;
+	margin-right: 10%;
+}
